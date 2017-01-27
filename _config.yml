@@ -26,3 +26,6 @@ github_username: johngrib
 
 # Build settings
 markdown: kramdown
+
+disqus:
+  shortname: johngrib
