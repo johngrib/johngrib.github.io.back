@@ -2,7 +2,6 @@
 layout: post
 title:  "Jekyll 블로그를 만들었다."
 date:   2017-01-21 22:37:25 +0900
-category: recipe
 tags: [blog, jekyll, recipe]
 ---
 

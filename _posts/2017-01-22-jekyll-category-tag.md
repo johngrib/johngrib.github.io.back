@@ -2,7 +2,6 @@
 layout: post
 title:  "Jekyll 블로그에 태그 추가하기."
 date:   2017-01-22 08:52:22 +0900
-category: recipe
 tags: [blog, jekyll, recipe, tag]
 ---
 
