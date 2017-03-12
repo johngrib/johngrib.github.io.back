@@ -28,4 +28,5 @@ github_username: johngrib
 markdown: kramdown
 
 disqus:
+  id: johngrib
   shortname: johngrib
