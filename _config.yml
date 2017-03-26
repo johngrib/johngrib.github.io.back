@@ -30,3 +30,6 @@ markdown: kramdown
 disqus:
   id: johngrib
   shortname: johngrib
+
+exclude:
+  - tags
