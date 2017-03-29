@@ -9,15 +9,15 @@ description: >
 
 # Your information
 email: johngrib82@gmail.com
-author: 이종립(John Grib)
-avatar: "//www.gravatar.com/avatar/your_email_md5?d=mm&s=135"
-profile: One sentence introducing yourself.
-#twitter_username: twitter_username
-#github_username:  github_username
+author: 기계인간 John Grib
+avatar: "//avatars2.githubusercontent.com/u/1855714?v=3&s=460"
+profile: 유물론자
+twitter_username: John_Grib
+github_username: johngrib
 
 # Comment Service (Disqus or 多说)
 #  choose one and un-comment the line to active it
-#disqus_shortname: xxx   # get one: https://disqus.com/admin/signup/
+disqus_shortname: johngrib   # get one: https://disqus.com/admin/signup/
 #duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
 
 permalink: /archivers/:title
@@ -27,7 +27,7 @@ gems:
  - jemoji
 
 # Build settings
-paginate: 5
+paginate: 15
 paginate_path: "page:num"
 
 highlighter: rouge

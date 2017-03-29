@@ -1,5 +1,9 @@
 <div class="col-box col-box-author">
+
+  {% if site.avatar %}
   <img class="avatar" src="{{ site.avatar }}" alt="{{ site.author }}">
+  {% endif %}
+
   <div class="col-box-title name">{{ site.author }}</div>
   <p>{{ site.profile }}</p>
   <p class="contact">
