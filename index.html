@@ -8,23 +8,17 @@ layout: default
   <ul class="post-list">
     {% for post in paginator.posts %}
       <li>
-        <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        
-        <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
-
-        <div class="post-excerpt">
-          {{ post.excerpt }}
-          <p>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">Read More &raquo;</a>
-          </p>
-        </div>
+          <div class="post-meta" style="float: right;">{{ post.date | date: "%b %-d, %Y" }}</div>
+          <div class="post-excerpt">
+            {{ post.excerpt }}
+          </div>
+        </a>
       </li>
     {% endfor %}
   </ul>
-  
-  <!-- Pagination links -->
+
+<!-- Pagination links -->
 <div class="pagination">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous">PREV</a>
