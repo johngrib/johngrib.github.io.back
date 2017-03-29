@@ -158,14 +158,14 @@ title: Tag
 
 다음과 같이 수정해주면 된다.
 
-{% highlight markdown %}
+```
 ---
 layout: post
 title: 글의 제목
 category: 카테고리
 tags: [태그1, 태그2]
 ---
-{% endhighlight %}
+```
 
 오케이 잘 돌아간다. 만족스럽다.
 
