@@ -81,7 +81,7 @@ public: true
     {% for post in site.tags[tag_name] %}
         <li>
             <a href="{{ root_url }}{{ post.url }}">
-                {{ post.date |  post.date | date: "%Y.%m.%d" }} - {{post.title}}
+                {{ post.date | date: "%Y.%m.%d" }} - {{post.title}}
             </a>
         </li>
     {% endfor %}
