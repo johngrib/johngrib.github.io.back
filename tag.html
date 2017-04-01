@@ -1,0 +1,112 @@
+---
+layout: default
+title: Tag
+permalink: /tag/
+public: true
+---
+
+<!-- prepare data -->
+
+{% assign rawtags = "" %}
+{% for post in site.posts %}
+    {% if post.public == true %}
+        {% assign ttags = post.tags | join:'|' | append:'|' %}
+        {% assign rawtags = rawtags | append:ttags %}
+    {% endif %}
+{% endfor %}
+
+{% assign sortedTags = rawtags | split:'|' | sort %}
+
+{% assign lastIndex = sortedTags | size | minus: 0%}
+
+{% assign cnt = 1 %}
+{% assign prev = "" %}
+{% assign tagArr = "" | split: "|" %}
+
+{% for i in (0..lastIndex) %}
+
+    {% assign tag = sortedTags[i] %}
+
+    {% if prev != tag or i == lastIndex%}
+
+        {% if prev != ""%}
+            {% assign ttt = prev | append:':' | append: cnt | split: ':' %}
+            {% assign tagArr = tagArr | push: ttt %}
+        {% endif %}
+
+        {% assign cnt = 1 %}
+        {% assign prev = tag %}
+
+    {% else %}
+
+        {% assign cnt = cnt | plus:1 %}
+
+    {% endif %}
+{% endfor %}
+
+<!-- html start -->
+
+<style>
+    .tag-list li {
+        display: inline-block;
+    }
+</style>
+
+<ul class="tag-list">
+{% for tag in tagArr %}
+
+    {% assign tag_name = tag[0] %}
+    {% assign tag_cnt = tag[1] %}
+
+    <li>
+        <a href="#{{tag_name}}" onclick="showTag('#{{tag_name}}')">
+            {{tag_name}}
+        </a>
+        <sup>{{tag_cnt}}</sup>
+    </li>
+
+{% endfor %}
+</ul>
+
+<div id="archives">
+{% for tag in site.tags %}
+
+    {% capture tag_name %}{{tag|first|slugize}}{% endcapture %}
+
+    <div class="archive-group" style="display:none" id="{{tag_name}}">
+
+    <h3 id="{{tag_name}}">{{ tag_name }}</h3>
+
+    <ul>
+    {% for post in site.tags[tag_name] %}
+        <li>
+            <a href="{{ root_url }}{{ post.url }}">
+                {{ post.date |  post.date | date: "%Y.%m.%d" }} - {{post.title}}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+
+    </div>
+{% endfor %}
+</div>
+
+<script src="/lib/jquery-3.1.1.min.js"></script>
+<script>
+    $(document).ready(function init(){
+        var url = window.location.href;
+        var req = /#([^\s]+)$/.exec(url);
+
+        if(!Array.isArray(req)) {
+            return false;
+        }
+        var selector = '#' + req.pop();
+        showTag(selector);
+    });
+
+    function showTag(selector) {
+        $('.archive-group').hide();
+        $(selector).show();
+    }
+</script>
+
