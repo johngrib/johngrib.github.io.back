@@ -3,6 +3,7 @@ layout: post
 title:  "텔레그램 봇 스켈레톤 만들기"
 date:   2017-03-12 21:08:16 +0900
 tags: [node.js, telegram, heroku, chatbot, bot]
+public: true
 ---
 
 심심해서 텔레그램 봇을 만들어 보았다.  

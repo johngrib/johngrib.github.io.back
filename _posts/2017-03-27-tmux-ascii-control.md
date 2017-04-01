@@ -2,7 +2,8 @@
 layout: post
 title:  "#TIL tmux 키 조합에서 C--가 불가능한 이유"
 date:   2017-03-27 22:57:52 +0900
-tags: [til, tmux, ascii]
+tags: [TIL, tmux, ascii]
+public: true
 ---
 
 

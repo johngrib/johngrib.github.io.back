@@ -2,7 +2,8 @@
 layout: post
 title:  "Jekyll 블로그를 만들었다."
 date:   2017-01-21 22:37:25 +0900
-tags: [blog, jekyll, recipe]
+tags: [jekyll]
+public: true
 ---
 
 Jekyll을 이용해 새 블로그를 만들었다.
