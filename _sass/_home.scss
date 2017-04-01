@@ -41,6 +41,9 @@
         margin: 0 20px;
         margin-bottom: .5em;
     }
+    .post-link {
+         text-decoration: none;
+    }
     .post-excerpt {
         &, * {
             font-size: $small-font-size;
