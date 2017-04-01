@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "#TIL 중괄호 인덴트 스타일을 조사해 보았다."
+title:  "중괄호 인덴트 스타일을 조사해 보았다."
+summary: "K&R style, Allman style."
 date:   2017-03-08 23:00:00 +0900
 tags: [TIL, style]
 public: true

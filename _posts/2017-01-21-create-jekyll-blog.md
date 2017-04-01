@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "Jekyll 블로그를 만들었다."
+title:  "github에 Jekyll 블로그를 만들었다."
+summary: "누구나 만드는 github 공짜 블로그."
 date:   2017-01-21 22:37:25 +0900
 tags: [jekyll]
 public: true
@@ -20,7 +21,7 @@ Jekyll을 이용해 새 블로그를 만들었다.
 # 2. 방금 생성한 repository를 로컬에 `clone`한다.
 
 ```sh
-$ git@github.com:johngrib/johngrib.github.io.git
+$ clone git@github.com:johngrib/johngrib.github.io.git
 ```
 
 # 3. Jekyll을 설치한다.
