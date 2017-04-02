@@ -45,28 +45,23 @@ public: true
 {% endfor %}
 
 <!-- html start -->
+<div class="home">
+    <ul class="tag-list">
+    {% for tag in tagArr %}
 
-<style>
-    .tag-list li {
-        display: inline-block;
-    }
-</style>
+        {% assign tag_name = tag[0] %}
+        {% assign tag_cnt = tag[1] %}
 
-<ul class="tag-list">
-{% for tag in tagArr %}
+        <li>
+            <a href="#{{tag_name}}" onclick="showTag('#{{tag_name}}')">
+                {{tag_name}}
+            </a>
+            <sup>{{tag_cnt}}</sup>
+        </li>
 
-    {% assign tag_name = tag[0] %}
-    {% assign tag_cnt = tag[1] %}
-
-    <li>
-        <a href="#{{tag_name}}" onclick="showTag('#{{tag_name}}')">
-            {{tag_name}}
-        </a>
-        <sup>{{tag_cnt}}</sup>
-    </li>
-
-{% endfor %}
-</ul>
+    {% endfor %}
+    </ul>
+</div>
 
 <div id="archives" class="home">
 {% for tag in site.tags %}

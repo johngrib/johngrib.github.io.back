@@ -26,7 +26,7 @@
     padding: 20px 40px;
     list-style: none;
     > li {
-        padding-bottom: 30px;
+        padding-bottom: 10px;
         border-bottom: 1px solid #CCC;
         margin-bottom: 30px;
     }
@@ -50,7 +50,7 @@
             line-height: $small-font-size;
             padding-top: 0;
             padding-bottom: 0;
-            color: #333;
+            color: #666;
         }
         code, pre, pre * {
             color: #666;
@@ -77,6 +77,14 @@
     }
     @include media-query($on-palm) {
         padding: 10px;
+    }
+    .post-tag {
+        padding-top: 10px;
+        a {
+            font-size: $small-font-size;
+            text-decoration: none;
+            padding-right: 10px;
+        }
     }
 }
 .pagination {
@@ -106,4 +114,8 @@
 .pagination li {
     display: inline-block;
 }
+.tag-list li {
+    display: inline-block;
 }
+}
+
