@@ -68,7 +68,7 @@ public: true
 {% endfor %}
 </ul>
 
-<div id="archives">
+<div id="archives" class="home">
 {% for tag in site.tags %}
 
     {% capture tag_name %}{{tag|first|slugize}}{% endcapture %}
@@ -77,13 +77,19 @@ public: true
 
     <h3 id="{{tag_name}}">{{ tag_name }}</h3>
 
-    <ul>
+    <ul class="post-list">
     {% for post in site.tags[tag_name] %}
+        {% if post.public == true %}
         <li>
-            <a href="{{ root_url }}{{ post.url }}">
-                {{ post.date | date: "%Y.%m.%d" }} - {{post.title}}
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                <span>{{ post.title }}</span>
+                <div class="post-meta" style="float: right;">{{ post.date | date: "%Y.%m.%d" }}</div>
+                <div class="post-excerpt">
+                    {{ post.summary }}
+                </div>
             </a>
         </li>
+        {% endif %}
     {% endfor %}
     </ul>
 
