@@ -39,7 +39,7 @@
         }
 
         pre {
-            margin: 0 -30px;
+            margin: 0;
             @include media-query($on-palm) {
                 margin: 0 -10px;
             }
@@ -53,5 +53,8 @@
     }
     .post-comments {
         padding-top: 30px;
+    }
+    figure {
+        margin: 0;
     }
 }
