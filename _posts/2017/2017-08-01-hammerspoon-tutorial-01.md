@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hammerspoon 튜토리얼 01 - 윈도우 힌트와 이동"
-summary: ""
+summary: "윈도우즈에는 있으나 맥에는 없는 그것"
 date:   2017-08-01 22:47:08 +0900
 tags: [hammerspoon]
 public: true
